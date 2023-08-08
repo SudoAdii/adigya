@@ -10,20 +10,13 @@ Mangling Rules: Apply mangle rules to existing words in order to create variatio
 
 Pattern-Based Generation: Generate wordlists based on user-defined patterns. This is useful for generating passwords that adhere to specific requirements, such as including a mix of uppercase, lowercase, digits, and special characters.
 
-Save and Export: Save generated wordlists in various formats, including plain text, CSV, and more. This makes it easy to use the generated wordlists in other tools and applications.
 
-Getting Started
-Clone the repository or download the Wordlist Generator tool from [https://github.com/InvierXargb/adigya.git].
+--[] INSTALLTION
+     TYPE :- git clone https://github.com/InvierXargb/adigya.git
 
-Install any required dependencies by following the instructions in the documentation.
-
-Run the tool using the command-line interface.
-
-Follow the on-screen prompts to customize the wordlist generation criteria, such as length, character set, dictionary sources, and mangle rules.
-
-Once you're satisfied with the criteria, initiate the wordlist generation process.
-
-After the generation is complete, you can find the generated wordlist in the specified output directory or file.
-
-Usage Examples
-Generate a wordlist of passwords that follow a specific pattern:
+--[] USAGE 
+     TYPE :- cd adigya
+     TYPE :- python3 adigya.py -i
+     --------------------------------
+     -THEN INPUT AS PER THE QUESTION-
+     --------------------------------
