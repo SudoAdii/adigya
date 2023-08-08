@@ -16,5 +16,6 @@ Pattern-Based Generation: Generate wordlists based on user-defined patterns. Thi
 
 --[] USAGE 
      TYPE :- cd adigya
+	
 --{} TYPE :- python3 adigya.py -i
      
