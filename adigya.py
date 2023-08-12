@@ -9,6 +9,8 @@ import urllib.error
 import urllib.parse
 import urllib.request
 import time
+from colorama import init, Fore
+from PIL import Image, ImageDraw
 
 __author__ = "ღ Mr.Invier"
 __version__ = "ღ 1.1"
@@ -121,21 +123,35 @@ def print_to_file(filename, unique_list_finished):
     )
 
 
-def print_cow():
-    print("""
+
+init(autoreset=True)  # Initialize colorama
+
+def print_colorful_banner():
+    width = 60
+    height = 10
+
+    banner = Image.new('RGB', (width, height))
+    draw = ImageDraw.Draw(banner)
+
+    gradient_colors = [(255, 0, 0), (255, 165, 0), (255, 255, 0)]
+    for i in range(height):
+        color = tuple(int(c * (height - i) / height) for c in gradient_colors[0])
+        draw.line([(0, i), (width, i)], fill=color)
+
+    heart_image = Image.open('heart.png')  # Replace with the path to your heart image
+    banner.paste(heart_image, (width // 2 - heart_image.width // 2, height // 2 - heart_image.height // 2), heart_image)
+
+    colorful_banner_text = """
      _____       ________       .___       ________     _____.___.       _____    
     /  _  \      \______ \      |   |     /  _____/     \__  |   |      /  _  \   
    /  /_\  \      |    |  \     |   |    /   \  ___      /   |   |     /  /_\  \  
   /    |    \     |    `   \    |   |    \    \_\  \     \____   |    /    |    \ 
   \____|__  /    /_______  /    |___|     \______  /     / ______|    \____|__  / 
           \/             \/                      \/      \/                   \/  
-    
+    """
 
------------------------------------------------------------------------------------
-                     CODED BY Mr.Invier : ADIGYA *INDIAN*
------------------------------------------------------------------------------------
-
-""")
+    print(Fore.BLACK + banner)
+    print(colorful_banner_text)
 
 
 def version():
